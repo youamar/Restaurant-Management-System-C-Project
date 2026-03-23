@@ -24,3 +24,10 @@ This is an Object-Oriented Programming (IOOP) project developed in C#. It aims t
 2. Clone this repository to your local machine:
    ```bash
    git clone [https://github.com/youamar/Restaurant-Management-System-C-Project.git](https://github.com/youamar/Restaurant-Management-System-C-Project.git)
+
+## 👨‍💻 Developers & Team Members
+This project was successfully developed through the collaborative efforts of our team:
+* Chang Kai Yang
+* Joseph Ang
+* Yau Zhi Xiong
+* Ngiam Kian Peng
