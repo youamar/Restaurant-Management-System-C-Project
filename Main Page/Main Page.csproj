@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6728097B-E7F6-45D4-810C-B7289145A0AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Main_Page</RootNamespace>
+    <AssemblyName>Main Page</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\Admin\AdminCustomerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\AdminCustomerEdit.Designer.cs">
+      <DependentUpon>AdminCustomerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\AdminCustomerEditControl.cs" />
+    <Compile Include="Form\Admin\AdminRoleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\AdminRoleEdit.Designer.cs">
+      <DependentUpon>AdminRoleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\AdminRoleEditControl.cs" />
+    <Compile Include="Form\Chef\EditInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Chef\EditInventory.Designer.cs">
+      <DependentUpon>EditInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Chef\EditInventoryControl.cs" />
+    <Compile Include="Form\Role\Role_ChangePassword_Control.cs" />
+    <Compile Include="Form\Manager\EditHallControl.cs" />
+    <Compile Include="Form\Customer\CustomerEditProfileControl.cs" />
+    <Compile Include="Form\Customer\CustomerProfileControl.cs" />
+    <Compile Include="Form\Customer\Customer_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Customer\Customer_Login.Designer.cs">
+      <DependentUpon>Customer_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Customer\Customer_Login_Control.cs" />
+    <Compile Include="Form\Customer\Customer_OTP_Control.cs" />
+    <Compile Include="Form\Customer\Customer_Signup_Control.cs" />
+    <Compile Include="Form\Order\Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Order\Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Order\FeedbackControl.cs" />
+    <Compile Include="Form\Reservation\AboutUsControl.cs" />
+    <Compile Include="Form\Manager\EditHall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Manager\EditHall.Designer.cs">
+      <DependentUpon>EditHall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Reservation\Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Reservation\Booking.Designer.cs">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Reservation\BookingControl.cs" />
+    <Compile Include="Form\Customer\CustomerEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Customer\CustomerEditProfile.Designer.cs">
+      <DependentUpon>CustomerEditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Customer\CustomerProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Customer\CustomerProfile.Designer.cs">
+      <DependentUpon>CustomerProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Reservation\AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Reservation\AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Order\CartControl.cs" />
+    <Compile Include="Form\Order\CartModel.cs" />
+    <Compile Include="Form\Order\CartService.cs" />
+    <Compile Include="Form\Order\FoodControl.cs" />
+    <Compile Include="Form\Coordinator\ManageReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Coordinator\ManageReservation.Designer.cs">
+      <DependentUpon>ManageReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Manager\EditMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Manager\EditMenu.Designer.cs">
+      <DependentUpon>EditMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Manager\ManageMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Manager\ManageMenu.Designer.cs">
+      <DependentUpon>ManageMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Customer\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Customer\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Customer\Customer_OTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Customer\Customer_OTP.Designer.cs">
+      <DependentUpon>Customer_OTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Manager\ManageHall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Manager\ManageHall.Designer.cs">
+      <DependentUpon>ManageHall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Manager\HallReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Manager\HallReport.Designer.cs">
+      <DependentUpon>HallReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Order\MenuControl.cs" />
+    <Compile Include="Form\Reservation\NewReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Reservation\NewReservation.Designer.cs">
+      <DependentUpon>NewReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Reservation\HallDisplayControl.cs" />
+    <Compile Include="Form\Customer\MailBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Customer\MailBox.Designer.cs">
+      <DependentUpon>MailBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Customer\MailBoxControl.cs" />
+    <Compile Include="Form\Order\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Order\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Order\InvoiceControl.cs" />
+    <Compile Include="Form\Manager\ManageHallControl.cs" />
+    <Compile Include="Form\Manager\EditMenuControl.cs" />
+    <Compile Include="Form\Manager\ManageMenuControl.cs" />
+    <Compile Include="Form\Coordinator\ManageReservationControl.cs" />
+    <Compile Include="Form\Manager\HallReportControl.cs" />
+    <Compile Include="Form\Admin\ManageRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\ManageRole.Designer.cs">
+      <DependentUpon>ManageRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\ManageRoleControl.cs" />
+    <Compile Include="Form\Admin\ManageCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\ManageCustomer.Designer.cs">
+      <DependentUpon>ManageCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\ManageCustomerControl.cs" />
+    <Compile Include="Model\MessageModel.cs" />
+    <Compile Include="Form\Order\OrderStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Order\OrderStatus.Designer.cs">
+      <DependentUpon>OrderStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Order\OrderStatusControl.cs" />
+    <Compile Include="Repository\MessageRepository.cs" />
+    <Compile Include="Form\Role\Role_EditProfile_Control.cs" />
+    <Compile Include="Form\Role\Role_Login_Control.cs" />
+    <Compile Include="Form\Role\Role_Profile_Control.cs" />
+    <Compile Include="Service\MessageService.cs" />
+    <Compile Include="Model\CategoryModel.cs" />
+    <Compile Include="Model\CustomerModel.cs" />
+    <Compile Include="Model\FeedbackModel.cs" />
+    <Compile Include="Model\HallModel.cs" />
+    <Compile Include="Model\InventoryModel.cs" />
+    <Compile Include="Model\InvoiceModel.cs" />
+    <Compile Include="Model\MenuModel.cs" />
+    <Compile Include="Model\OrderDetailModel.cs" />
+    <Compile Include="Model\OrderModel.cs" />
+    <Compile Include="Model\RecipeModel.cs" />
+    <Compile Include="Model\ReservationModel.cs" />
+    <Compile Include="Model\RestaurantModel.cs" />
+    <Compile Include="Model\RoleModel.cs" />
+    <Compile Include="Form\Order\Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Order\Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Order\Food.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Order\Food.Designer.cs">
+      <DependentUpon>Food.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Order\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Order\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Reservation\HallDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Reservation\HallDisplay.Designer.cs">
+      <DependentUpon>HallDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Reservation\PayInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Reservation\PayInvoice.Designer.cs">
+      <DependentUpon>PayInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\CustomerRepository.cs" />
+    <Compile Include="Repository\FeedbackRepository.cs" />
+    <Compile Include="Repository\HallRepository.cs" />
+    <Compile Include="Repository\InventoryRepository.cs" />
+    <Compile Include="Repository\InvoiceRepository.cs" />
+    <Compile Include="Repository\MenuRepository.cs" />
+    <Compile Include="Repository\OrderDetailRepository.cs" />
+    <Compile Include="Repository\OrderRepository.cs" />
+    <Compile Include="Repository\RecipeRepository.cs" />
+    <Compile Include="Repository\ReservationRepository.cs" />
+    <Compile Include="Repository\RestaurantRepository.cs" />
+    <Compile Include="Repository\RoleRepository.cs" />
+    <Compile Include="Form\Role\Role_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Role\Role_ChangePassword.Designer.cs">
+      <DependentUpon>Role_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Role\Role_EditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Role\Role_EditProfile.Designer.cs">
+      <DependentUpon>Role_EditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Role\Role_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Role\Role_Profile.Designer.cs">
+      <DependentUpon>Role_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Customer\Customer_Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Customer\Customer_Signup.Designer.cs">
+      <DependentUpon>Customer_Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\Reservation\NewReservationControl.cs" />
+    <Compile Include="Form\Role\Role_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Role\Role_Login.Designer.cs">
+      <DependentUpon>Role_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\CategoryService.cs" />
+    <Compile Include="Service\CustomerService.cs" />
+    <Compile Include="Service\FeedbackService.cs" />
+    <Compile Include="Service\HallService.cs" />
+    <Compile Include="Service\InventoryService.cs" />
+    <Compile Include="Service\InvoiceService.cs" />
+    <Compile Include="Service\MenuService.cs" />
+    <Compile Include="Service\OrderDetailService.cs" />
+    <Compile Include="Service\OrderService.cs" />
+    <Compile Include="Service\RecipeService.cs" />
+    <Compile Include="Service\ReservationService.cs" />
+    <Compile Include="Service\RestaurantService.cs" />
+    <Compile Include="Service\RoleService.cs" />
+    <Compile Include="Form\Chef\TakeOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Chef\TakeOrder.Designer.cs">
+      <DependentUpon>TakeOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Chef\UpdateInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Chef\UpdateInventory.Designer.cs">
+      <DependentUpon>UpdateInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\ViewFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\ViewFeedback.Designer.cs">
+      <DependentUpon>ViewFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\All\SessionManager.cs" />
+    <Compile Include="Form\Chef\TakeOrderControl.cs" />
+    <Compile Include="Form\Chef\UpdateInventoryControl.cs" />
+    <Compile Include="Form\Admin\ViewFeedbackControl.cs" />
+    <Compile Include="Form\Admin\ViewSalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\ViewSalesReport.Designer.cs">
+      <DependentUpon>ViewSalesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\ViewSalesReportControl.cs" />
+    <EmbeddedResource Include="Form\Admin\AdminCustomerEdit.resx">
+      <DependentUpon>AdminCustomerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\AdminRoleEdit.resx">
+      <DependentUpon>AdminRoleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Chef\EditInventory.resx">
+      <DependentUpon>EditInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\Customer_Login.resx">
+      <DependentUpon>Customer_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Order\Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Manager\EditHall.resx">
+      <DependentUpon>EditHall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Reservation\Booking.resx">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\CustomerEditProfile.resx">
+      <DependentUpon>CustomerEditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\CustomerProfile.resx">
+      <DependentUpon>CustomerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Reservation\AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Coordinator\ManageReservation.resx">
+      <DependentUpon>ManageReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Manager\EditMenu.resx">
+      <DependentUpon>EditMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\Customer_OTP.resx">
+      <DependentUpon>Customer_OTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Manager\ManageMenu.resx">
+      <DependentUpon>ManageMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Order\Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Order\Food.resx">
+      <DependentUpon>Food.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Order\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Reservation\HallDisplay.resx">
+      <DependentUpon>HallDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\Role_ChangePassword.resx">
+      <DependentUpon>Role_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\Role_EditProfile.resx">
+      <DependentUpon>Role_EditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\Role_Profile.resx">
+      <DependentUpon>Role_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\Customer_Signup.resx">
+      <DependentUpon>Customer_Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Manager\ManageHall.resx">
+      <DependentUpon>ManageHall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Manager\HallReport.resx">
+      <DependentUpon>HallReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Reservation\NewReservation.resx">
+      <DependentUpon>NewReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Reservation\PayInvoice.resx">
+      <DependentUpon>PayInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\MailBox.resx">
+      <DependentUpon>MailBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Order\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Order\OrderStatus.resx">
+      <DependentUpon>OrderStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\ManageRole.resx">
+      <DependentUpon>ManageRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\ManageCustomer.resx">
+      <DependentUpon>ManageCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\Chef\TakeOrder.resx">
+      <DependentUpon>TakeOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Chef\UpdateInventory.resx">
+      <DependentUpon>UpdateInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\ViewFeedback.resx">
+      <DependentUpon>ViewFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\Role_Login.resx">
+      <DependentUpon>Role_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\ViewSalesReport.resx">
+      <DependentUpon>ViewSalesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataBase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DataBase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
